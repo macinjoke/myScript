@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+files=(`find ~/.vim/ftplugin -name "*.vim"`)
+
+for file in "${files[@]}"; do
+  echo $file | cut -d / -f 6
+  cat $file
+done

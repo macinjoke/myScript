@@ -1,0 +1,7 @@
+#!/bin/sh
+
+output_r=`cat /var/log/apt/history.log`
+output=`zcat /var/log/apt/history.log.*.gz` 
+
+echo "$output_r$output"
+
